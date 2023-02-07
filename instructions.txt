@@ -1,0 +1,2 @@
+Para iniciar um projeto em React, precisamos
+digitar no terminal: npx create-react-app [nome do projeto]
