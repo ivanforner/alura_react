@@ -12,10 +12,13 @@ const Team = (props) => {
     }
 
     return(
-        <section className='team' style={sectionCss}>
+        props.colaboradores.length > 0 && <section className='team' style={sectionCss}>
             <h3 style={h3Css}>{props.nome}</h3>
-            <Employee/>
-            <Employee/>
+            <div className='colaboradores'>
+                {props.colaboradores.map(colaborador => {
+                    return <Employee nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} key={colaborador.cargo}/>
+                })}
+            </div>
         </section>
     );
 };

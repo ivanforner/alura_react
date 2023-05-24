@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner/';
 import Form from './components/Form';
 import Team from './components/Team';
+import Rodape from './components/Rodape'
 
 
 function App() {
@@ -57,8 +58,18 @@ function App() {
       <Form teams={teams.map(team => team.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
 
       {teams.map(team => {
-        return (<Team key={team.nome} nome={team.nome} corPrimaria={team.corPrimaria} corSecundaria={team.corSecundaria}/>)
+        return (
+          <Team 
+            key={team.nome} 
+            nome={team.nome} 
+            corPrimaria={team.corPrimaria} 
+            corSecundaria={team.corSecundaria}
+            colaboradores={colaboradores.filter(colaborador => colaborador.time === team.nome)}
+          /> 
+        )
       })}
+
+      <Rodape/>
 
     </div>
   );
