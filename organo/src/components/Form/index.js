@@ -8,16 +8,6 @@ import Button from "../Button";
 
 const Form = (props) => {
 
-    const itens = [
-        "Programação",
-        "Front-End",
-        "Data Science",
-        "DevOps",
-        "UX e Design",
-        "Mobile",
-        "Inovação e Gestão"
-    ];
-
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
@@ -60,7 +50,7 @@ const Form = (props) => {
                 <DropDown 
                     required={true} 
                     label="Time" 
-                    itens={itens}
+                    itens={props.teams}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
