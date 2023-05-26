@@ -48,7 +48,8 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
   
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
+    // Abra o console do navegador para debugar
+    debugger
     setColaboradores([...colaboradores, colaborador])
   }
 
@@ -56,7 +57,6 @@ function App() {
     <div className="App">
       <Banner/>
       <Form teams={teams.map(team => team.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-
       {teams.map(team => {
         return (
           <Team 
@@ -68,9 +68,7 @@ function App() {
           /> 
         )
       })}
-
       <Rodape/>
-
     </div>
   );
 }

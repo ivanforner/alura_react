@@ -16,7 +16,7 @@ const Team = (props) => {
             <h3 style={h3Css}>{props.nome}</h3>
             <div className='colaboradores'>
                 {props.colaboradores.map(colaborador => {
-                    return <Employee nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} key={colaborador.cargo}/>
+                    return <Employee nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} key={colaborador.cargo} corFundo={props.corPrimaria}/>
                 })}
             </div>
         </section>

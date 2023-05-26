@@ -1,10 +1,10 @@
 import './Employee.css'
 
 // Desestruturando o props
-const Employee = ({ nome, imagem, cargo }) => {
+const Employee = ({ nome, imagem, cargo, corFundo }) => {
     return (
         <div className='colaborador'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={ { backgroundColor: corFundo } }>
                 <img src={imagem} alt={nome}/>
             </div>
             <div className='rodape'>
