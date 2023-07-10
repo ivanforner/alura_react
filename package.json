@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "hex-to-rgba": "^2.0.1"
+    "hex-to-rgba": "^2.0.1",
+    "uuid": "^9.0.0"
   }
 }
